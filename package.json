@@ -1,0 +1,27 @@
+{
+  "name": "adventofcode25",
+  "version": "1.0.0",
+  "description": "- Docker - Node.js",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xalsie/AdventOfCode25.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xalsie/AdventOfCode25/issues"
+  },
+  "homepage": "https://github.com/xalsie/AdventOfCode25#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1"
+  }
+}

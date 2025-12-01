@@ -8,7 +8,7 @@
 #### DOCKER
 
 ```bash
-docker run -it --rm --name AoC -v $PWD:/usr/src/app -w /usr/src/app node:25.1-alpine3.22 sh
+docker run -it --rm --name AoC25 -v $PWD:/app denoland/deno:alpine-2.5.6 run --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env /app/main.ts
 ```
 
 #### Run the code
@@ -19,6 +19,14 @@ node main.js
 
 ### Tracks
 
-Day | Part1 | Part2
----|---|--
-Day 1 |  | 
+| Day | Part1 | Part2 |   | Day | Part1 | Part2 |   | Day | Part1 | Part2 |
+|:---|:-----:|:-----:|:-:|:---|:-----:|:-----:|:-:|:---|:-----:|:-----:|
+|  1  |   ✅   |   ✅   |   | 10  |       |       |   | 19  |       |       |
+|  2  |       |       |   | 11  |       |       |   | 20  |       |       |
+|  3  |       |       |   | 12  |       |       |   | 21  |       |       |
+|  4  |       |       |   | 13  |       |       |   | 22  |       |       |
+|  5  |       |       |   | 14  |       |       |   | 23  |       |       |
+|  6  |       |       |   | 15  |       |       |   | 24  |       |       |
+|  7  |       |       |   | 16  |       |       |   | 25  |       |       |
+|  8  |       |       |   | 17  |       |       |   |     |       |       |
+|  9  |       |       |   | 18  |       |       |   |     |       |       |
