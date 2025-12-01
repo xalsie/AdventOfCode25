@@ -4,17 +4,19 @@
 
 - Docker
 - Node.js
+- Deno
+- (Optional) TypeScript
 
-#### DOCKER
+#### DOCKER for Deno
 
 ```bash
 docker run -it --rm --name AoC25 -v $PWD:/app denoland/deno:alpine-2.5.6 run --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env /app/main.ts
 ```
 
-#### Run the code
+#### Deno
 
 ```bash
-node main.js
+deno --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env ./main.ts
 ```
 
 ### Tracks
