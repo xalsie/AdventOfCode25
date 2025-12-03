@@ -52,16 +52,15 @@ export class Day1 {
         let dial = 50;
 
         this.inputData.forEach(({ direction, distance }) => {
-            const start = dial;
             const t1 = direction === 'R'
-            ? (start === 0 ? 100 : 100 - start)
-            : (start === 0 ? 100 : start);
+                ? (dial === 0 ? 100 : 100 - dial)
+                : (dial === 0 ? 100 : dial);
 
             const hits = distance < t1 ? 0 : 1 + Math.floor((distance - t1) / 100);
 
             dial = direction === 'R'
-            ? (start + distance) % 100
-            : ((start - distance) % 100 + 100) % 100;
+                ? (dial + distance) % 100
+                : ((dial - distance) % 100 + 100) % 100;
 
             count += hits;
         });
