@@ -8,4 +8,5 @@ const aoc = new AdventOfCode(2025);
 aoc.registerSolution(1, Day1);
 aoc.registerSolution(2, Day2);
 
-aoc.run(1);
+// aoc.run(1);
+aoc.run(2);
