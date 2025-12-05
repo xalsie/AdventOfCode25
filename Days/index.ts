@@ -1,2 +1,3 @@
 export * from './Day1/main.js';
 export * from './Day2/main.js';
+export * from './Day3/main.js';
