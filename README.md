@@ -10,13 +10,19 @@
 #### DOCKER for Deno
 
 ```bash
-docker run -it --rm --name AoC25 -v $PWD:/app denoland/deno:alpine-2.5.6 run --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env /app/main.ts
+docker run -it --rm --name AoC25 -v $PWD:/app denoland/deno:alpine-2.5.6 run --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env ./main.ts <day-number>
 ```
 
 #### Deno
 
+##### Create new Day
 ```bash
-deno --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env ./main.ts
+deno run --allow-write=./Days/ ./scripts/createDay.ts <day-number>
+```
+
+##### Run Day
+```bash
+deno --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env ./main.ts <day-number>
 ```
 
 ### Tracks
@@ -25,7 +31,7 @@ deno --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-e
 |:---|:-----:|:-----:|:-:|:---|:-----:|:-----:|:-:|:---|:-----:|:-----:|
 |  1  |   ✅   |   ✅   |   | 10  |       |       |   | 19  |       |       |
 |  2  |   ✅   |   ✅   |   | 11  |       |       |   | 20  |       |       |
-|  3  |       |       |   | 12  |       |       |   | 21  |       |       |
+|  3  |   ✅   |   ✅   |   | 12  |       |       |   | 21  |       |       |
 |  4  |       |       |   | 13  |       |       |   | 22  |       |       |
 |  5  |       |       |   | 14  |       |       |   | 23  |       |       |
 |  6  |       |       |   | 15  |       |       |   | 24  |       |       |
