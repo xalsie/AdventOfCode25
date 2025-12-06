@@ -63,7 +63,17 @@ class AdventOfCode {
         const filePath = path.join(__dirname, `inputs/puzzleInput_${day}.txt`);
         if (fs.existsSync(filePath)) {
             const solution = new this.solutions[day](filePath);
-            solution.run();
+            const millisecondsPerSecond = 1_000_000n;
+
+            console.log(`Running Day ${day}...`);
+            const start = BigInt(Date.now()) * millisecondsPerSecond;
+
+            await solution.run();
+
+            const end = BigInt(Date.now()) * millisecondsPerSecond;
+
+            const durationMs = Number(end - start) / Number(millisecondsPerSecond);
+            console.log(`Day ${day} completed in ${durationMs.toFixed(2)} ms`);
         } else {
             console.log(`No input file found for day ${day}. Skipping.`);
         }
