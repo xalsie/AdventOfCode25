@@ -10,19 +10,19 @@
 #### DOCKER for Deno
 
 ```bash
-docker run -it --rm --name AoC25 -v $PWD:/app denoland/deno:alpine-2.5.6 run --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env ./main.ts <day-number>
+docker run -it --rm --name AoC25 -v $PWD:/app denoland/deno:alpine-2.5.6 run --sloppy-imports -A ./main.ts <day-number>
 ```
 
 #### Deno
 
 ##### Create new Day
 ```bash
-deno run --allow-write=./Days/ ./scripts/createDay.ts <day-number>
+deno run --allow-write=./Days/ --allow-read ./scripts/createDay.ts <day-number>
 ```
 
 ##### Run Day
 ```bash
-deno --sloppy-imports --allow-net --allow-read --allow-write=./inputs/ --allow-env ./main.ts <day-number>
+deno --sloppy-imports -A ./main.ts <day-number>
 ```
 
 ### Tracks
